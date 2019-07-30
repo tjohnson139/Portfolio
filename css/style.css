@@ -1,0 +1,21 @@
+body {
+    margin: 0%;
+}
+
+.navbar {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 20px;
+    letter-spacing: 2px;
+    word-spacing: 2px;
+    color: #000000;
+    font-weight: normal;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: none;
+    background-color: rgb(205, 206, 204);
+}
+
+.navbar a:hover {
+    font-weight: bold;
+}
