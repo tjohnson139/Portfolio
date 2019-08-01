@@ -89,7 +89,7 @@ img {
     overflow: hidden;
 }
 
-img:hover {
+#about img:hover {
     filter: grayscale(100%);
     transition-duration: 1.5s;
 }
@@ -102,4 +102,32 @@ img:hover {
 
 .col_2 p {
     font-variant: none;
+}
+
+.col_3 {
+    width: 50%;
+    height: 350px;
+    background-color: darkgray;
+    float: left;
+    padding: 10px;
+    text-align: center;
+    display: block;
+    padding-top: 50px;
+}
+
+.col_3 h2 {
+    padding-bottom: 30px;
+}
+
+.Row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+footer {
+    text-align: center;
+    padding: 5px;
+    background-color: black;
+    color: white;
 }
