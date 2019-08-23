@@ -8,12 +8,23 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="./js/java_script.js"></script>
     
     <title>Tyler Johnson</title>
+
+  <script>
+  $(function() {
+    $('body').removeClass('fade-out');
+  });
+  </script>
+
   </head>
 
 
   <body>
+
+    <script>document.body.className += ' fade-out';</script>
     
     <!--NAV BAR-->
 
@@ -68,7 +79,7 @@
       </div>
       <div class="col_2">
         <h2>About Me</h2>
-        <p>
+        <p style="font-size:1.5vw;">
           I'm a full-stack developer who loves to code.<br>
           My husband, two french-bulldogs and I have lived in Portland since 2012.
         </p>
@@ -82,13 +93,13 @@
     <div class= "row" id="about">
         <div class="col_2">
           <h2>Check Out My Work</h2>
-          <p>
+          <p style="font-size:1.5vw;">
             Take a look at my <a href="https://github.com/tjohnson139" target="_blank">GitHub page here.</a><br>
             I have experience in HTML, Python, SQL and C#.
           </p>
         </div>
         <div class="col_1">
-            <a href="https://github.com/tjohnson139" target="_blank"><img src="./images/github.jpg" alt="github"></a>
+            <a href="https://github.com/tjohnson139" target="_blank"><img src="./images/github.jpg" onload = "remove_fade()" alt="github"></a>
         </div>
     </div>
 
@@ -102,18 +113,18 @@
       </div>
       <div class="col_3">
         <h2>Reach Out!</h2>
-        <form>
+        <form name="myForm" onsubmit="return validateForm()">
             <div class="form-group">
-              <input type="text" class="form-control" id="formGroupExampleInput" placeholder="Name">
+              <input type="text" name="name" class="form-control" id="formGroupExampleInput" placeholder="Name">
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="Phone Number">
+              <input type="text" class="form-control" id="formGroupExampleInput2 phone" placeholder="Phone Number">
             </div>
             <div class="form-group">
-              <input type="text" class="form-control" id="formGroupExampleInput2" placeholder="E-Mail Address">
+              <input type="text" class="form-control" id="formGroupExampleInput3 email" placeholder="E-Mail Address">
             </div>
             <div>
-              <a tabindex="0" class="btn btn-info" role="button" data-toggle="popover" data-trigger="focus" data-content="Thanks for reaching out!">Submit</a>
+              <a tabindex="0" input type="submit" value="Submit" class="btn btn-info" role="button" data-toggle="popover" data-trigger="focus" data-content="Thanks for reaching out!">Submit</a>
             </div>
           </form>
       </div>
@@ -132,12 +143,24 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-  
+    <script src="./js/java_script.js"></script>
+
     <script>
       $(function () {
         $('[data-toggle="popover"]').popover()
       })
     </script>
+
+    <script>
+      function validateForm() {
+        var x = document.forms["myForm"]["name"].value;
+        if x == ("") {
+          alert("'Name' must be filled out");
+          return false;
+        }
+      }
+    </script>
+    
   
   </body>
 </html>
